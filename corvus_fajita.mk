@@ -1,6 +1,6 @@
 #
 # Copyright (C) 2018 The LineageOS Project
-# Copyright (C) 2019-2022 The Evolution X Project
+# Copyright (C) 2019-2022 The Corvus Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -22,15 +22,14 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from fajita device
 $(call inherit-product, device/oneplus/fajita/device.mk)
 
-# Inherit some common Evolution X stuff.
-$(call inherit-product, vendor/evolution/config/common_full_phone.mk)
+# Inherit some common Corvus stuff.
+$(call inherit-product, vendor/corvus/config/common_full_phone.mk)
 
-EVO_BUILD_TYPE := OFFICIAL
 EXTRA_UDFPS_ANIMATIONS := true
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_SUPPORTS_QUICK_TAP := true
 
-PRODUCT_NAME := evolution_fajita
+PRODUCT_NAME := corvus_fajita
 PRODUCT_DEVICE := fajita
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus
@@ -44,3 +43,12 @@ PRODUCT_GMS_CLIENTID_BASE := android-oneplus
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_DEVICE=OnePlus6T \
     TARGET_PRODUCT=OnePlus6T
+
+# Inherit some common Corvus flags
+CORVUS_MAINTAINER=CR7Raees
+
+# Offline Charging
+TARGET_INCLUDE_PIXEL_CHARGER := true
+
+USE_GAPPS=true
+TARGET_GAPPS_ARCH := arm64

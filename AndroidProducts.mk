@@ -1,6 +1,6 @@
 #
 # Copyright (C) 2018-2019 The LineageOS Project
-# Copyright (C) 2019-2022 The Evolution X Project
+# Copyright (C) 2019-2022 The Corvus Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -16,9 +16,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/evolution_fajita.mk
+    $(LOCAL_DIR)/corvus_fajita.mk
 
 COMMON_LUNCH_CHOICES := \
-    evolution_fajita-user \
-    evolution_fajita-userdebug \
-    evolution_fajita-eng
+    corvus_fajita-user \
+    corvus_fajita-userdebug \
+    corvus_fajita-eng
